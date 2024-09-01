@@ -1,0 +1,110 @@
+$col: #A0E7E5;
+$back: #FAF9F6;
+
+.main{
+    height: auto;
+    width: 100vw;
+}
+
+.buttonGroup{
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button{
+        padding: .5rem;
+        min-width: 100px;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        background-color: $col;
+        text-align: center;
+        border: 0;
+        border-radius: .5rem;
+        box-shadow: 1px 1px lightblue;
+    }
+
+    .button:hover{
+        background-color: darken($color: $col, $amount: 10);
+        cursor: pointer;
+    }
+
+    .buttonSelected{
+        padding: .5rem;
+        min-width: 100px;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        border: 0;
+        border-radius: .5rem;
+        text-align: center;
+        background-color: #B4F8C8;
+    }
+}
+
+.cardGroup{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    .card{
+        min-height: 400px;
+        min-width: 400px;
+        padding: 1rem;
+        background-color: $back;
+        margin: 1rem;
+        border-radius: 1rem;
+
+        .cardHeader{
+            height: 10%;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+
+            p{
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                color: #FFAEBC;
+                font-weight: 1000;
+            }
+            h1{
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+
+        .cardMain{
+            height: 70%;
+            padding: 1rem;
+
+            .img{
+                width: 100%;
+                max-height: 200px;
+                border-radius: .4rem;
+            }
+        }
+
+        .cardFooter{
+            padding: .5rem;
+            display: flex;
+            justify-content: center;
+            
+            a{
+                background-color: $col;
+                padding: .5rem;
+                border-radius: .5rem;
+                text-decoration: none;
+                color: black;
+                margin-right: .5rem;
+                margin-left: .5rem;
+            }
+            a:hover{
+                background-color: darken($color: $col, $amount: 10);
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<div class="main">
+    <div class="buttonGroup">
+        <div (click)="changeState('uni')" [ngClass]="current == 'uni' ? 'buttonSelected' : 'button'">University</div>
+        <button (click)="changeState('personal')" [ngClass]="current == 'personal' ? 'buttonSelected' : 'button'">Personal</button>
+        <button (click)="changeState('work')" [ngClass]="current == 'work' ? 'buttonSelected' : 'button'">Work</button>
+    </div>
+
+    <div class="cardGroup">
+        <div class="card" *ngFor="let item of personal; index as i;">
+            <div class="cardHeader">
+                <p>{{item.id}}</p>
+                <h1>{{item.name}}</h1>
+            </div>
+            <div class="cardMain">
+                <img src={{item.image}} class="img"/>
+                <p class="selector">Languages Used:{{item.text}}</p>
+            </div>
+            <div class="cardFooter">
+                <a href={{item.link}} target="_blank">View On Github</a>
+                <a href={{item.link}} target="_blank">Live Test</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
